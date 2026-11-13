@@ -35,11 +35,8 @@ let spazio = 1;
 async function setup() {
   createCanvas(windowWidth, windowHeight);
 
-  // carico il mio dataset 
+  // carico il mio dataset
   data = await loadTable("assets/scuole_superiori_milano_2026.csv", ",", "header");
-
-  // console.log(scuole.length);
-  // console.log(scuole[0]);
 
   // area dello schermo dove sta la nuvola (a destra della legenda)
   let areaX = larghezzaLegenda + margine;
@@ -50,7 +47,7 @@ async function setup() {
   let centroNuvolaX = areaX + areaLarghezza / 2;
   let centroNuvolaY = margine + areaAltezza / 2;
 
-  // legge le rige del dataset 
+  // legge le righe del dataset
   for (let numeroRiga = 0; numeroRiga < data.getRowCount(); numeroRiga++) {
     let codice = data.getString(numeroRiga, "CODICESCUOLA");
     let nome = data.getString(numeroRiga, "DENOMINAZIONESCUOLA");
@@ -65,7 +62,7 @@ async function setup() {
     // ogni tipologia ha il suo punto di attrazione, su un cerchio attorno al centro
     let angolo = typeIndex * TWO_PI / tipologie.length;
     let centroX = centroNuvolaX + cos(angolo) * distanzaGruppi;
-    let centroY = centroNuvolaY + sin(angolo) * distanzaGruppi
+    let centroY = centroNuvolaY + sin(angolo) * distanzaGruppi;
 
     scuole.push({
       id: codice,
@@ -80,6 +77,9 @@ async function setup() {
       centroY: centroY
     });
   }
+
+  console.log(scuole.length);
+  console.log(scuole[0]);
 }
 
 function draw() {
