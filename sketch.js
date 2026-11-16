@@ -218,7 +218,7 @@ function disegnaLegenda() {
 
   // legenda dei colori
   textSize(14);
-  text("COLORE · tipologia di istituto", margineLegenda, margineLegenda + 110);
+  text("COLORE = tipologia di istituto", margineLegenda, margineLegenda + 110);
 
   // y è la posizione verticale della riga che sto disegnando
   let y = margineLegenda + 138;
@@ -241,7 +241,7 @@ function disegnaLegenda() {
   fill(255);
   textAlign(LEFT, TOP);
   textSize(14);
-  text("DIMENSIONE · alunni stimati", margineLegenda, y);
+  text("DIMENSIONE = alunni stimati", margineLegenda, y);
   y += 28;
 
   // tre esempi di scuole: una piccola, una media, una grande
@@ -277,7 +277,7 @@ function disegnaLegenda() {
   fill(255);
   textAlign(LEFT, TOP);
   textSize(14);
-  text("BORDO · comune dell'istituto", margineLegenda, y);
+  text("BORDO = comune dell'istituto", margineLegenda, y);
   y += 28;
 
   // esempio con bordo bianco
@@ -304,7 +304,7 @@ function disegnaLegenda() {
   
   text("Passa sopra a un cerchio per il nome,\nclicca per aprire il dettaglio", margineLegenda, y);
 
-  text("Alcune scuola hanno all'interno sia \nil liceo sia l'istituto tecnico, ma il \ndataset li inserisce in quest'ultimo.", margineLegenda, y + 50);
+  text("Alcune scuole hanno all'interno sia \nil liceo sia l'istituto tecnico, ma il \ndataset le inserisce in quest'ultimo.", margineLegenda, y + 50);
 
   // riporto l'allineamento del testo com'era
   textAlign(LEFT, TOP);

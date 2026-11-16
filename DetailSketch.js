@@ -142,8 +142,9 @@ function draw() {
   }
 }
 
-// scrive un'etichetta piccola grigia e, sotto, il suo valore in bianco
+// serve a scrivere le caratteristiche della scuola tutte nello stesso modo, come se fosse un'etichetta
 function disegnaCampo(etichetta, valore, y) {
+  
   // etichetta
   textSize(13);
   fill(150);
